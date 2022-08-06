@@ -573,7 +573,7 @@ HRESULT CDXGICapture::CaptureToFile(_In_ LPCWSTR lpcwOutputFileName, _Out_opt_ B
 	CComPtr<ID3D11Texture2D>    ipAcquiredDesktopImage;
 	CComPtr<ID2D1Bitmap>        ipD2D1SourceBitmap;
 
-	std::chrono::system_clock::time_point startTick;
+	std::chrono::high_resolution_clock::time_point startTick;
 	if (nullptr != pRetRenderDuration) {
 		startTick = std::chrono::high_resolution_clock::now();
 	}
